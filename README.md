@@ -1,6 +1,8 @@
 # Crisis Manager Agent: Llama 3.2
 
-**Status:** 🚧 Work in Progress
+## ** Author:** Muwaffak Abed
+
+**Status:**  Work in Progress
 **Last Updated:** February 7, 2026
 
 ## Overview
