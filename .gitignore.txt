@@ -1,0 +1,7 @@
+# Ignore model weights
+*.bin
+*.pt
+*.safetensors
+/models/
+/wandb/
+__pycache__/
