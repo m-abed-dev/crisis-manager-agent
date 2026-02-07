@@ -15,6 +15,7 @@ Repository Structure
 This repository separates data, code, and evidence for clarity:
 
 Plaintext
+
 crisis-manager-agent/
 │
 ├── README.md                 # Project documentation and results
