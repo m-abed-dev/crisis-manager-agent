@@ -34,6 +34,7 @@ crisis-manager-agent/
     │   ├── insult_trap.png
     │   └── competitor_trap.png
     └── training_loss.png     # Graph of the training loss curve
+    
 Tech Stack
 Model: unsloth/Llama-3.2-3B-Instruct
 
