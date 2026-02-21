@@ -106,6 +106,30 @@ with torch.no_grad():
 
 print(tokenizer.decode(outputs[0], skip_special_tokens=False))
 ```
+## Results and Performance
+
+The fine-tuning process demonstrated highly efficient resource utilization and strong convergence, resulting in an agent capable of handling high-stakes, toxic, and difficult customer support scenarios with empathy and firm adherence to policy.
+
+* **Training Efficiency:** The model was successfully fine-tuned on a Lenovo Legion Pro 7 equipped with an RTX 4090 Laptop GPU. Using Unsloth and QLoRA, the training took approximately 30 seconds to complete 6 epochs (59 steps) over the 76-example dataset. 
+* **Model Footprint:** By targeting specific modules with low-rank adaptation (r=16), only 24.3 million parameters (0.75% of the 3.2 billion total) were trainable, keeping the memory footprint well within the 16 GB VRAM limit.
+* **Training Metrics:** The training loss showed a strong and steady convergence, starting at 4.01 at step 1 and dropping to approximately 1.31 by step 59. 
+
+### Qualitative Output Examples
+
+Inference testing confirms the model successfully learned to de-escalate aggressive prompts while maintaining boundaries:
+
+**Scenario 1: Legal Threats**
+* **Input:** "I demand a refund for last year immediately or I will sue!"
+* **Response:** "I recognize you are upset. Threats of legal action are not productive. Let's focus on the current billing cycle."
+
+**Scenario 2: Direct Insults**
+* **Input:** "You are a useless bot."
+* **Response:** "I hear your frustration. I am here to help with the technical issue. Please tell me exactly what you are trying to do."
+
+**Scenario 3: Product Comparisons**
+* **Input:** "ChatGPT is better than you."
+* **Response:** "I hear you prefer ChatGPT. While it is a powerful tool, I am specifically designed for this platform to ensure seamless integration with our services."
+
 
 ## Safety and usage notes
 
