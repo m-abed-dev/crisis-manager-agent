@@ -1,0 +1,16 @@
+# Core ML Frameworks
+torch
+torchvision
+torchaudio
+
+# LLM Fine-tuning Stack
+unsloth
+transformers
+peft
+bitsandbytes
+trl
+datasets
+
+# Utilities
+sentencepiece
+protobuf
